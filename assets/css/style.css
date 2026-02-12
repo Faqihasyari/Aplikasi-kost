@@ -1,0 +1,382 @@
+/**
+ * Main Stylesheet
+ * File: assets/css/style.css
+ */
+
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #858796;
+    --success-color: #1cc88a;
+    --danger-color: #e74a3b;
+    --warning-color: #f6c23e;
+    --info-color: #36b9cc;
+    --sidebar-width: 250px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fc;
+    color: #5a5c69;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: var(--sidebar-width);
+    background: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+    color: white;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+.sidebar-brand {
+    padding: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.sidebar-brand h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.sidebar-menu li {
+    margin: 0.2rem 0;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding-left: 2rem;
+}
+
+.sidebar-menu i {
+    margin-right: 0.75rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: var(--sidebar-width);
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar-custom {
+    background-color: white;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-title h4 {
+    margin: 0;
+    color: #5a5c69;
+}
+
+.navbar-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-info {
+    text-align: right;
+}
+
+.user-info .user-name {
+    font-weight: bold;
+    color: #5a5c69;
+}
+
+.user-info .user-role {
+    font-size: 0.85rem;
+    color: var(--secondary-color);
+}
+
+/* Content Area */
+.content-area {
+    padding: 2rem;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 0.35rem;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.card-header {
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+    padding: 0.75rem 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+/* Stats Cards */
+.stats-card {
+    border-left: 4px solid;
+    height: 100%;
+}
+
+.stats-card.primary {
+    border-left-color: var(--primary-color);
+}
+
+.stats-card.success {
+    border-left-color: var(--success-color);
+}
+
+.stats-card.warning {
+    border-left-color: var(--warning-color);
+}
+
+.stats-card.danger {
+    border-left-color: var(--danger-color);
+}
+
+.stats-card.info {
+    border-left-color: var(--info-color);
+}
+
+.stats-icon {
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+.stats-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stats-value {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #5a5c69;
+}
+
+/* Tables */
+.table {
+    color: #5a5c69;
+}
+
+.table thead th {
+    background-color: #f8f9fc;
+    border-bottom: 2px solid #e3e6f0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fc;
+}
+
+/* Badges */
+.badge-status {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.badge-aktif {
+    background-color: var(--success-color);
+}
+
+.badge-selesai {
+    background-color: var(--secondary-color);
+}
+
+.badge-kosong {
+    background-color: var(--info-color);
+}
+
+.badge-terisi {
+    background-color: var(--warning-color);
+}
+
+.badge-lunas {
+    background-color: var(--success-color);
+}
+
+.badge-belum-bayar {
+    background-color: var(--warning-color);
+}
+
+.badge-terlambat {
+    background-color: var(--danger-color);
+}
+
+/* Buttons */
+.btn {
+    padding: 0.5rem 1rem;
+    border-radius: 0.35rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #2e59d9;
+    border-color: #2e59d9;
+}
+
+/* Forms */
+.form-control,
+.form-select {
+    border: 1px solid #d1d3e2;
+    border-radius: 0.35rem;
+    padding: 0.6rem 0.75rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+/* Login Page */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+}
+
+/* Kost Card */
+.kost-card {
+    transition: transform 0.3s;
+    height: 100%;
+}
+
+.kost-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 2rem 0 rgba(58, 59, 69, 0.3);
+}
+
+.kost-image {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.35rem 0.35rem 0 0;
+}
+
+.kost-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* QRIS Preview */
+.qris-container {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f9fc;
+    border-radius: 0.35rem;
+}
+
+.qris-image {
+    max-width: 300px;
+    margin: 1rem auto;
+}
+
+/* Alert */
+.alert {
+    border-radius: 0.35rem;
+    border: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .navbar-custom {
+        padding: 1rem;
+    }
+    
+    .content-area {
+        padding: 1rem;
+    }
+}
+
+/* Badge Status */
+.badge-status {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 0.25rem;
+}
+
+.badge-aktif { background-color: var(--success-color); }
+.badge-selesai { background-color: var(--secondary-color); }
+.badge-kosong { background-color: var(--info-color); }
+.badge-terisi { background-color: var(--warning-color); }
+.badge-lunas { background-color: var(--success-color); }
+.badge-belum-bayar { background-color: var(--warning-color); }
+.badge-terlambat { background-color: var(--danger-color); }
+.badge-menunggu { background-color: #36b9cc; } /* Warna cyan untuk status Menunggu */
+
+/* Utilities */
+.text-primary { color: var(--primary-color) !important; }
+.text-success { color: var(--success-color) !important; }
+.text-warning { color: var(--warning-color) !important; }
+.text-danger { color: var(--danger-color) !important; }
+.bg-primary { background-color: var(--primary-color) !important; }
+.bg-success { background-color: var(--success-color) !important; }
+.bg-warning { background-color: var(--warning-color) !important; }
+.bg-danger { background-color: var(--danger-color) !important; }
